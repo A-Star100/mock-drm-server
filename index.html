@@ -12,7 +12,7 @@
       const videoElement = document.getElementById('videoPlayer');
       const videoSource = document.getElementById('videoSource');
   
-      // Fetch the decrypted video file and convert it to a Blob
+      // Fetch the decrypted video file and convert it to a Blob so we don't have to read the file from the server again
       fetch('http://localhost:3000/video?pass=password123')
         .then(response => response.blob()) // Convert the response to a Blob
         .then(blob => {
