@@ -1,5 +1,7 @@
 # mock-drm-server
-A Node.js server example that uses OpenSSL within a child process to decrypt an encrypted video and serve it to the user on-the-fly.
+A Node.js server example that uses OpenSSL within a child process to decrypt an encrypted video and serve it to the user on-the-fly,
+serving as a mock DRM setup similar to [ClearKey](https://github.com/Dash-Industry-Forum/ClearKey-Content-Protection) but simplified and only serving for encryption
+and decryption.
 
 ## Setup
 First, get a video file from anywhere you want. If OpenSSL isn't installed on your device, [install it from here](https://github.com/openssl/openssl).
