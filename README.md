@@ -16,5 +16,5 @@ To decrypt it to a file in the filesystem instead of memory like on the server w
 ```shell
 openssl enc -aes-256-cbc -d -pbkdf2 -in video.mp4.enc -out video.mp4 -pass pass:password123
 ```
-*This command uses the same standards as the above but dynamically uses the salted encrypted value for decryption instead of using a flag*.
+*This command uses the same standards as the above but dynamically reads the salted encrypted value for decryption instead of using a flag to specify that it's salted*.
 
