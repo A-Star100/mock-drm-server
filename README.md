@@ -9,8 +9,7 @@ Then, encrypt it with OpenSSL like this:
 openssl enc -aes-256-cbc -salt -pbkdf2 -in video.mp4 -out video.mp4.enc -pass pass:password123
 ```
 *This command uses the AES-256 encryption standard in CBC mode with PBKDF2 (for password-based key derivation, more secure), 
-uses a salt to add randomness to the encryption instead of producing the same encrypted value every time, a password,
-unencrypted input and encrypted output*.
+uses a salt to add randomness to the encryption instead of producing the same encrypted value every time, and the obvious*.
 
 To decrypt it to a file in the filesystem instead of memory like on the server when you need to, use:
 
