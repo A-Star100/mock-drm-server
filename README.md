@@ -8,10 +8,14 @@ Then, encrypt it with OpenSSL like this:
 ```shell
 openssl enc -aes-256-cbc -salt -pbkdf2 -in video.mp4 -out video.mp4.enc -pass pass:password123
 ```
+*This command uses the AES-256 encryption standard in CBC mode with PBKDF2 (for password-based key derivation, more secure), 
+uses a salt to add randomness to the encryption instead of producing the same encrypted value every time, a password,
+unencrypted input and encrypted output*.
 
 To decrypt it to a file in the filesystem instead of memory like on the server when you need to, use:
 
 ```shell
 openssl enc -aes-256-cbc -d -pbkdf2 -in video.mp4.enc -out video.mp4 -pass pass:password123
 ```
+*This command uses the same standards as the above but dynamically uses the salted encrypted value for decryption instead of using a flag*.
 
