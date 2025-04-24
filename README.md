@@ -19,3 +19,7 @@ openssl enc -aes-256-cbc -d -pbkdf2 -in video.mp4.enc -out video.mp4 -pass pass:
 ```
 *This command uses the same standards as the above but dynamically reads the salted encrypted value for decryption instead of using a flag to specify that it's salted*.
 
+## WebCrypto
+While [WebCrypto](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API) isn't viable for large video files (mostly for small text files),
+it can be used to encrypt and decrypt extremely compressed media files (<1MB).
+
