@@ -6,26 +6,5 @@
   <video controls autoplay width="1280" height="720">
     <source src="http://localhost:3000/video?pass=password123" id="videoSource" type="video/mp4">
   </video>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // When JS is enabled, let's create the Object URL once the page loads
-      const videoElement = document.getElementById('videoPlayer');
-      const videoSource = document.getElementById('videoSource');
-  
-      // Fetch the decrypted video file and convert it to a Blob so we don't have to read the file from the server again
-      fetch('http://localhost:3000/video?pass=password123')
-        .then(response => response.blob()) // Convert the response to a Blob
-        .then(blob => {
-          // Create an Object URL for the Blob
-          const objectURL = URL.createObjectURL(blob);
-          
-          // Set the Object URL as the video source
-          videoSource.src = objectURL;
-        })
-        .catch(error => {
-          console.error('Error fetching decrypted video:', error);
-        });
-    });
-  </script>
   
 </body>
